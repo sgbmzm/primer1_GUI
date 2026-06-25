@@ -70,18 +70,13 @@ jobs:
         
         OS="${{ matrix.os }}"
         VERSION="${{ matrix.os_short_name }}_${{ matrix.arch }}_onedir"
-        MAIN_FILE="mtDNA_tool_simple.py"
-        APP_NAME="mtDNA_tool_simple"
+        MAIN_FILE="primer1_GUI.py"
+        APP_NAME="primer1_GUI"
 
         ##########################################################
-        # הכנת הקבצים הנוספים שצריך להוסיף לתיקיית ההתקנה
-        COMMON_DATA="\
-        --add-data required_files/RSRS.txt${{ matrix.sep }}. \
-        --add-data required_files/rCRS.txt${{ matrix.sep }}. 
-        "
 
         # עכשיו פקודת ייצוא קובץ ההתקנה
-        pyinstaller --noconsole --name $APP_NAME $COMMON_DATA $MAIN_FILE
+        pyinstaller --noconsole --name $APP_NAME $MAIN_FILE
 
         ##########################################################################
         
