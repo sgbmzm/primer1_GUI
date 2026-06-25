@@ -123,7 +123,6 @@ jobs:
         echo 'CreateAppDir=yes' >> setup.iss
         echo 'DisableProgramGroupPage=no' >> setup.iss
         echo 'DefaultGroupName={#AppName}' >> setup.iss
-        echo '; SetupIconFile=required_files\yda_icon.ico' >> setup.iss
         echo '' >> setup.iss
         echo '[Languages]' >> setup.iss
         echo 'Name: "hebrew"; MessagesFile: "compiler:Languages\Hebrew.isl"' >> setup.iss
